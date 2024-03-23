@@ -42,10 +42,13 @@ const checkGameCompleted = (board, setGameStatus, gameTurn, setPlayer1, setPlaye
         } else {
             setPlayer2({ ...player2, score: player2.score + 1 });
         }
+        return true;
     } else if (getWinningPlayer(board) === 0 && gameTurn === 8) {
         playerWon = 'tie';
         setGameStatus({ playerIdRound: playerWon, isWin: true });
+        return true;
     }
+    return false;
 };
 
 export {

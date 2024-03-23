@@ -3,12 +3,12 @@ import InGameMenu from '../Components/InGameMenu/InGameMenu';
 import PlayerCard from "../Components/PlayerCard/PlayerCard";
 import Board from "../Components/Board/Board";
 import GameController from '../Components/GameController/GameController';
-import { getNormalAiCoordinates } from "../utils/getNormalAiCoordinates";
 import { getWinningPlayer, checkGameCompleted } from "../utils/getWinningPlayer";
 import playerOneImg from '../assets/moon-player.svg';
 import playerTwoImg from '../assets/star-player.svg';
+import { getUnbeatableAiCoordinates } from "../utils/getUnbeatableAiCoordinates";
 
-const GameMode2 = () => {
+const GameMode3 = () => {
     const [board, setBoard] = useState([
         [0, 0, 0],
         [0, 0, 0],
@@ -28,7 +28,7 @@ const GameMode2 = () => {
     });
     const [playerAI, setPlayerAI] = useState({
         id: 1,
-        name: 'Computer',
+        name: 'Super Computer',
         symbol: 'dark_mode',
         score: 0
     });
@@ -70,7 +70,7 @@ const GameMode2 = () => {
 
     useEffect(() => {
         if (gameTurn % 2 !== 0 && gameStatus.isWin === false)
-            getNormalAiCoordinates(board, occupy);
+            getUnbeatableAiCoordinates(player1, playerAI, board, gameTurn, occupy);
     }, [gameTurn]);
 
     return (
@@ -90,4 +90,4 @@ const GameMode2 = () => {
     );
 };
 
-export default GameMode2;
+export default GameMode3;
