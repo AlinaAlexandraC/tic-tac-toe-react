@@ -1,0 +1,10 @@
+.menu-panel {
+    min-width: 30vw;
+    min-height: 50vh;
+    background-color: white;
+    font-weight: 700;
+}
+
+.menu li a button {
+    font-size : 36px;
+}

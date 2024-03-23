@@ -1,0 +1,15 @@
+.board-display {
+    box-shadow:     
+    0 0 30px 15px #0ff;;
+}
+
+.cell {
+    background-color: #FAEBD7;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: rgb(188, 153, 212);
+}

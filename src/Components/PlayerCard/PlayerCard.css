@@ -1,0 +1,13 @@
+.player-one-image {
+    max-width: 75px;
+}
+
+.player-name, .player-score {
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.player-card {
+    width: 200px;
+}
