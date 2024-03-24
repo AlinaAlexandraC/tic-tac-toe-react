@@ -1,6 +1,6 @@
 .bg-hero {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background: #021024;
 }
 
@@ -44,3 +44,27 @@ ul {
   justify-content: center;
   align-items: center;
 }
+
+.menu-panel {
+  min-width: 30vw;
+  min-height: 50vh;
+  background-color: white;
+  font-weight: 700;
+}
+
+.menu li a button {
+  font-size : 36px;
+}
+
+@media screen and (max-width: 990px) {
+  .text-hero {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .game-logo {
+    display: none;
+  }
+}
+

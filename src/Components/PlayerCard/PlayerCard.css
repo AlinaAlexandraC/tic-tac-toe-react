@@ -1,8 +1,9 @@
-.player-one-image {
+.player-image {
     max-width: 75px;
 }
 
-.player-name, .player-score {
+.player-name,
+.player-score {
     font-weight: 600;
     font-size: 20px;
     text-transform: uppercase;
@@ -10,4 +11,48 @@
 
 .player-card {
     width: 200px;
+}
+
+@media screen and (max-width: 990px) {
+    .player-card {
+        width: auto;
+    }
+
+    .player-score {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .player-image {
+        display: none;
+    }
+
+    .player-card {
+        width: auto;
+        height: 50px;
+    }
+
+    .player-name,
+    .player-score {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .player-card {
+        width: auto;
+        height: 50px;
+    }
+
+    .player-name,
+    .player-score {
+        padding: 0;
+        margin: 0;
+    }
+
+    .player-image {
+        display: none;
+    }
 }

@@ -3,7 +3,7 @@ import './Menu.css';
 
 const Menu = () => {
     return (
-        <div className='menu-panel d-flex flex-column align-items-center p-5 rounded bg-white shadow mt-5'>
+        <div className='menu-panel d-flex flex-column align-items-center p-5 rounded bg-white shadow'>
             <h1 className="mb-5">Tic-Tac-Toe</h1>
             <ul className='d-flex flex-column justify-content-center align-items-center menu'>
                 <li className='my-3'>

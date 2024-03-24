@@ -66,10 +66,10 @@ const GameMode1 = () => {
 
     return (
         <div className="game">
-            <div className="d-flex justify-content-center align-items-center">
+            <div className="d-flex flex-column flex-md-row justify-content-center align-items-center">
                 <InGameMenu />
             </div>
-            <div className="game-panel d-flex align-items-center justify-content-center my-5">
+            <div className="game-panel d-flex flex-column flex-md-row align-items-center justify-content-center">
                 <PlayerCard player={player1} img={playerOneImg} />
                 <Board board={board} occupy={occupy} />
                 <PlayerCard player={player2} img={playerTwoImg} />

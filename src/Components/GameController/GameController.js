@@ -54,7 +54,7 @@ const GameController = ({ gameStatus, resetGame }) => {
     }
 
     return (
-        <div className='w-25 bg-primary d-flex justify-content-center align-items-center text-nowrap p-5 rounded shadow text-white'>
+        <div className='bg-primary d-flex justify-content-center mx-3 px-5 py-5 align-items-center text-nowrap rounded shadow text-white game-controller'>
             {gameStatus.isWin && gameStatus.playerIdRound !== 'tie' &&
                 <h2 className="text-hero">Player {gameStatus.playerIdRound} has won!</h2>
             }

@@ -4,7 +4,7 @@ import logo from '../../assets/tic-tac-toe.svg';
 
 const InGameMenu = () => {
     return (
-        <div className='w-50 d-flex justify-content-between align-items-center'>
+        <div className='w-50 d-flex justify-content-between align-items-center in-game-menu my-5'>
             <Link to='/'>
                 <button className='btn-hero btn'>Menu</button>
             </Link>

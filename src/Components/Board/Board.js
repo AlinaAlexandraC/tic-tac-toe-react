@@ -2,7 +2,7 @@ import "./Board.css";
 
 const Board = ({ board, occupy }) => {
   return (
-    <div className="board-display bg-white mx-5">
+    <div className="board-display bg-white mx-5 my-5">
       {board.map((row, indexY) => (
         <div key={indexY} className="row">
           {row.map((cell, index) => (
