@@ -17,7 +17,6 @@ function getWinningPlayer(board) {
     if (board[0][2] === board[1][1] && board[1][1] === board[2][0]) {
         return board[0][2];
     }
-
     // vertical wins
     if (board[0][0] === board[1][0] && board[1][0] === board[2][0]) {
         return board[0][0];
@@ -39,7 +38,7 @@ const checkGameCompleted = (board, setGameStatus, gameTurn, setPlayer1, setPlaye
         setGameStatus({ playerIdRound: playerWon, isWin: true });
         if (getWinningPlayer(board) === 1) {
             setPlayer1({ ...player1, score: player1.score + 1 });
-        } else {
+        } else if (getWinningPlayer(board) === 2) {
             setPlayer2({ ...player2, score: player2.score + 1 });
         }
         return true;

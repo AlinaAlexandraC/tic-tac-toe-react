@@ -3,10 +3,10 @@ import InGameMenu from '../Components/InGameMenu/InGameMenu';
 import PlayerCard from "../Components/PlayerCard/PlayerCard";
 import Board from "../Components/Board/Board";
 import GameController from '../Components/GameController/GameController';
-import { getWinningPlayer, checkGameCompleted } from "../utils/getWinningPlayer";
+import { getUnbeatableAiCoordinates } from "../utils/getUnbeatableAiCoordinates";
+import { checkGameCompleted } from "../utils/getWinningPlayer";
 import playerOneImg from '../assets/moon-player.svg';
 import playerTwoImg from '../assets/star-player.svg';
-import { getUnbeatableAiCoordinates } from "../utils/getUnbeatableAiCoordinates";
 
 const GameMode3 = () => {
     const [board, setBoard] = useState([
@@ -59,19 +59,21 @@ const GameMode3 = () => {
                 cell.innerHTML = `${playerAI.symbol}`;
                 setGameStatus({ ...gameStatus, playerIdRound: 0 });
             }
-        } else {
-            checkGameCompleted(board, setGameStatus, gameTurn, setPlayer1, setPlayerAI, player1, playerAI);
-        }
+        } 
 
         setBoard(newBoard);
         setGameTurn(gameTurn + 1);
-        getWinningPlayer(board);
+        checkGameCompleted(board, setGameStatus, gameTurn, setPlayer1, setPlayerAI, player1, playerAI);
     };
 
     useEffect(() => {
         if (gameTurn % 2 !== 0 && gameStatus.isWin === false)
             getUnbeatableAiCoordinates(player1, playerAI, board, gameTurn, occupy);
     }, [gameTurn]);
+
+    useEffect(() => {
+        checkGameCompleted(board, setGameStatus, gameTurn, setPlayer1, setPlayerAI, player1, playerAI);
+    }, [board]);
 
     return (
         <div className="game">

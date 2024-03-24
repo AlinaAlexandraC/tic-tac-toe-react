@@ -4,7 +4,7 @@ import PlayerCard from "../Components/PlayerCard/PlayerCard";
 import Board from "../Components/Board/Board";
 import GameController from '../Components/GameController/GameController';
 import { getNormalAiCoordinates } from "../utils/getNormalAiCoordinates";
-import { getWinningPlayer, checkGameCompleted } from "../utils/getWinningPlayer";
+import { checkGameCompleted } from "../utils/getWinningPlayer";
 import playerOneImg from '../assets/moon-player.svg';
 import playerTwoImg from '../assets/star-player.svg';
 
@@ -59,19 +59,21 @@ const GameMode2 = () => {
                 cell.innerHTML = `${playerAI.symbol}`;
                 setGameStatus({ ...gameStatus, playerIdRound: 0 });
             }
-        } else {
-            checkGameCompleted(board, setGameStatus, gameTurn, setPlayer1, setPlayerAI, player1, playerAI);
-        }
+        } 
 
         setBoard(newBoard);
         setGameTurn(gameTurn + 1);
-        getWinningPlayer(board);
+        checkGameCompleted(board, setGameStatus, gameTurn, setPlayer1, setPlayerAI, player1, playerAI);
     };
 
     useEffect(() => {
         if (gameTurn % 2 !== 0 && gameStatus.isWin === false)
-            getNormalAiCoordinates(board, occupy);
+            getNormalAiCoordinates(board, occupy, gameTurn, playerAI, player1);
     }, [gameTurn]);
+
+    useEffect(() => {
+        checkGameCompleted(board, setGameStatus, gameTurn, setPlayer1, setPlayerAI, player1, playerAI);
+    }, [board]);
 
     return (
         <div className="game">
