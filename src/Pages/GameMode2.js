@@ -78,7 +78,7 @@ const GameMode2 = () => {
             <div className="d-flex flex-column flex-md-row justify-content-center align-items-center">
                 <InGameMenu />
             </div>
-            <div className="game-panel d-flex flex-column flex-md-row align-items-center justify-content-center ">
+            <div className="game-panel d-flex flex-column flex-md-row align-items-center justify-content-center">
                 <PlayerCard player={player1} img={playerOneImg} />
                 <Board board={board} occupy={occupy} />
                 <PlayerCard player={playerAI} img={playerTwoImg} />

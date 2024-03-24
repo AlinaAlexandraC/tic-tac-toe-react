@@ -15,7 +15,11 @@
 
 @media screen and (max-width: 990px) {
     .player-card {
-        width: auto;
+        width: 177px;
+    }
+
+    .player-name {
+        font-size: 15px;
     }
 
     .player-score {
