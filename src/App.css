@@ -66,5 +66,11 @@ ul {
   .game-logo {
     display: none;
   }
+
+  .menu-panel {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+  }
 }
 
