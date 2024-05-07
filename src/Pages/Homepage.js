@@ -4,7 +4,7 @@ import Menu from '../Components/Menu/Menu';
 const Homepage = () => {
     return ( 
         <div className="homepage d-flex flex-column justify-content-center align-items-center">
-            <img src={logo} alt="" className="game-logo mb-5" />
+            <img src={logo} alt="" className="game-logo m-5" />
             <Menu />
         </div>
     );
